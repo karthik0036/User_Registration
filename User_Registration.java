@@ -45,13 +45,12 @@ public class User_Registration {
 	        else
 	            System.out.println("Invalid Mobile");
 	    }
-	 // Rule3 Should have atleast 1 numeric character
+	    // Rule4 Should have one special character
 	    public static void password() {
 	        Scanner sc  = new Scanner(System.in);
 	        System.out.println("\nEnter the Password");
 	        String p = sc.nextLine();
-	        if (Pattern.matches("^(?=.*[0-9])\"+\"(?=.*[a-z])\"+\"(?=.*[A-Z])\"+\"(?=.*[@#$%^&+=]){8,}$", p) == true)
-	        	
+	        if (Pattern.matches("^(?=.*[a-z])\"+\"(?=.*[A-Z])\"+\"(?=.*[@#$%^&+=]){8,}$", p) == true)
 	            System.out.println("Valid Password");
 	        else
 	            System.out.println("Invalid Password");
