@@ -26,8 +26,18 @@ public class User_Registration {
 	        else
 	            System.out.println("Invalid Last Name");
 	    }
+	    public static void email() {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("\nEnter EMail");
+	        String email = sc.nextLine();
+	        if (Pattern.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*$", email) == true)
+	            System.out.println("Valid Email");
+	        else
+	            System.out.println("Invalid Email");
+	    }
 	    public static void main(String[] args) {
 	        firstName();
 	        lastName();
+	        email();
 	    }
 	}
